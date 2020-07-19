@@ -1,0 +1,194 @@
+{
+  "mainMenu": [
+    {
+      "name": "About",
+      "url": "#about",
+      "type": "internal"
+    },
+    {
+      "name": "Benefits",
+      "url": "#benefits",
+      "type": "internal"
+    },
+    {
+      "name": "Marketplace",
+      "url": "#marketplace",
+      "type": "internal"
+    },
+    {
+      "name": "Getting started",
+      "url": "#getting-started",
+      "type": "internal"
+    },
+    {
+      "name": "Console",
+      "url": "#",
+      "type": "external"
+    },
+    {
+      "name": "Support",
+      "url": "#",
+      "type": "external"
+    }
+  ],
+  "leadspace": {
+    "title": "Customer engagement: Any time. Anywhere.",
+    "content": "Build a custom video, voice or messaging solution with a single easy-to-use platform.",
+    "cta": {
+      "text": "Get early access",
+      "url": "#"
+    }
+  },
+  "about": {
+    "name": "About",
+    "title": "A marketplace for cloud communication assets unlike any other.",
+    "content": {
+      "main": "Fonoster has developed an ecosystem that provides business with more value-added services at better prices. Businesses can implement whatever combination of services and apps that will best serve their customers -- and stop paying for other services they don’t need.",
+      "list": {
+        "title": "Supports assets:",
+        "items": [
+          "SMS / MMS services",
+          "Trunking",
+          "Text to speech / Speech to text",
+          "Call Transcription",
+          "AI APIs",
+          "Storage Services",
+          "Analytics"
+        ]
+      }
+    },
+    "cta": {
+      "text": "Jump into the marketplace",
+      "url": "#"
+    }
+  },
+  "benefits": {
+    "name": "Benefits",
+    "title": "Fonoster’s mission is to bring together businesses, developers, and asset providers in a way that allows everyone to win.",
+    "content": {
+      "list": [
+        {
+          "0": {
+            "title": "For businesses",
+            "items": [
+              "Add value without added cost",
+              "Easily port your number",
+              "Bring your preferred trunk provider or partner with one of ours to take advantage of the best prices for call termination",
+              "Access modern AI capabilities"
+            ]
+          },
+          "1": {
+            "title": "For developers",
+            "items": [
+              "Choose the most suitable provider for your project",
+              "Partner with one of our Trunking Service Providers based on individual project requirements"
+            ]
+          },
+          "2": {
+            "title": "For asset providers",
+            "items": [
+              "Take advantage of increased exposure to potential users in a secured",
+              "blockchain-based channel of distribution"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "marketplace": {
+    "name": "Marketplace",
+    "title": "How does the marketplace work?",
+    "content": {
+      "main": "The marketplace brings together businesses, developers, and asset providers in a mutually beneficial platform. Users do business through a simple three-step process:",
+      "list": [
+        {
+          "0": "<strong>Step One:</strong> An Asset Provider publishes a service offer with accompanying contract agreements to a registry. After a reviewing process, the service offer will appear on the Public Offer Catalog.",
+          "1": "<strong>Step Two:</strong> Businesses discover Assets in the public offer catalog that meet their unique needs.",
+          "2": "<strong>Step Three:</strong> Businesses follow an on-boarding process, accept the terms and conditions, and begin using the asset in their projects. They immediately have the tooling and SDKs to build, test, and deploy the applications."
+        }
+      ],
+      "cta": {
+        "text": "Jump into the marketplace",
+        "url": "#"
+      }
+    }
+  },
+  "gettingStarted": {
+    "name": "Getting started",
+    "title": "Build a custom application for your business, today.",
+    "content": {
+      "main": "Businesses can build an app quickly and seamlessly on the Fonoster platform.",
+      "list": {
+        "items": [
+          {
+            "0": {
+              "intro": "It begins with a number.",
+              "content": "Find the perfect number for your project in the Marketplace."
+            },
+            "1": {
+              "intro": "Build your app using our Smart APIs and SDKs.",
+              "content": "Create a smart video, voice or messaging application that meets your business needs without the clutter of unneeded features or historically burdensome customizations."
+            },
+            "2": {
+              "intro": "Deploy your application to Fonoster Cloud.",
+              "content": "Once you’ve customized your app, launch and get started quickly."
+            },
+            "3": {
+              "intro": "Analyze your results.",
+              "content": "Improve your application over time with A/B testing."
+            }
+          }
+        ]
+      }
+    }
+  },
+  "ctaBanner": {
+    "headline": "Ready to engage your clients better, faster?",
+    "subheadline": "Try us out to start building for free.",
+    "cta": [
+      {
+        "0": {
+          "text": "Get early access",
+          "url": "#",
+          "type": "button"
+        },
+        "1": {
+          "text": "Download the infographic",
+          "url": "#",
+          "type": "download"
+        }
+      }
+    ]
+  },
+  "footerMenu": [
+    {
+      "list": {
+        "name": "Product",
+        "items": [
+          {
+            "0": {
+              "name": "About",
+              "url": "#about",
+              "type": "internal"
+            },
+            "1": {
+              "name": "Marketplace",
+              "url": "#marketplace",
+              "type": "internal"
+            },
+            "2": {
+              "name": "Console",
+              "url": "#",
+              "type": "external"
+            },
+            "3": {
+              "name": "Support",
+              "url": "#",
+              "type": "external"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
