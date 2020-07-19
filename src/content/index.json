@@ -35,8 +35,9 @@
     "title": "Customer engagement: Any time. Anywhere.",
     "content": "Build a custom video, voice or messaging solution with a single easy-to-use platform.",
     "cta": {
-      "text": "Get early access",
-      "url": "#"
+      "text": "Download the infographic",
+      "url": "#",
+      "type": "download"
     }
   },
   "about": {

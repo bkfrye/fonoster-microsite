@@ -17,9 +17,10 @@ const button = css`
     border-radius: 20px;
     color: #333741;
     display: block;
+    font-size: 14px;
     font-weight: 600;
     height: 40px;
-    padding: 9px 22px;
+    padding: 10px 22px;
     text-decoration: none;
     transition: all 220ms ease-in-out;
     width: 100%;

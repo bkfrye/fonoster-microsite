@@ -59,10 +59,16 @@ const logoWrapper = css`
   & svg {
     height: auto;
     width: 111px;
+
+    & path {
+      fill: #fff;
+    }
   }
 `
 
 const menuWrapper = css`
+  display: none;
+
   background-color: #4746D4;
   bottom: 0;
   left: 0;

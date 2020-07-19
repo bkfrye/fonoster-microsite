@@ -1,7 +1,8 @@
 import React from 'react'
-// import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../components/layout'
 // import SEO from '../components/seo'
+
+import LeadSpace from '../components/sections/LeadSpace'
 
 const IndexPage = () => {
   // const data = useStaticQuery(graphql`
@@ -11,7 +12,7 @@ const IndexPage = () => {
   // `)
   return (
     <Layout>
-      <h1>title</h1>
+      <LeadSpace />
 
     </Layout>
   )
