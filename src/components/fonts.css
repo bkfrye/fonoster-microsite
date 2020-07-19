@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../../static/fonts/CircularStd-Bold.eot');
+  src: url('../../static/fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../static/fonts/CircularStd-Bold.woff2') format('woff2'),
+      url('../../static/fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../../static/fonts/CircularStd-Medium.eot');
+  src: url('../../static/fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../../static/fonts/CircularStd-Medium.woff2') format('woff2'),
+      url('../../static/fonts/CircularStd-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../../static/fonts/CircularStd-Black.eot');
+  src: url('../../static/fonts/CircularStd-Black.eot?#iefix') format('embedded-opentype'),
+      url('../../static/fonts/CircularStd-Black.woff2') format('woff2'),
+      url('../../static/fonts/CircularStd-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('../../static/fonts/CircularStd-Book.eot');
+  src: url('../../static/fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
+      url('../../static/fonts/CircularStd-Book.woff2') format('woff2'),
+      url('../../static/fonts/CircularStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

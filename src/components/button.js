@@ -1,0 +1,34 @@
+import React from 'react'
+import { css } from '@emotion/core'
+
+const Button = () => (
+  <div css={button}>
+    <a href="www.google.com">Get early access</a>
+  </div>
+)
+
+
+const button = css`
+  display: inline-block;
+  max-height: 40px;
+  & a {
+    background-color: #FDBF55;
+    border: 1px solid #FDBF55;
+    border-radius: 20px;
+    color: #333741;
+    display: block;
+    font-weight: 600;
+    height: 40px;
+    padding: 9px 22px;
+    text-decoration: none;
+    transition: all 220ms ease-in-out;
+    width: 100%;
+
+    &:hover {
+      background-color: #FDAF2A;
+      border: 1px solid #FDAF2A;
+    }
+  }
+`
+
+export default Button
