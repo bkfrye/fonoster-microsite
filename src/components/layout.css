@@ -21,7 +21,27 @@ body {
   padding: 0 1em;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: normal;
   margin: 0 0 0.25em;
+}
+
+h2 {
+  color: #333741;
+  font-family: 'Circular Std', 'Circular Std Book', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #4746D4;
+  font-size: 35px;
+  line-height: 45px;
+}
+
+p {
+  color: #858B9B;
+  margin-bottom: 1em;
 }

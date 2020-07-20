@@ -69,6 +69,7 @@ const Section = styled.section`
 
   @media (min-width: 1056px) {
     background-color: transparent;
+    padding-bottom: 30%;
     padding-top: 3vw;
   }
 
@@ -83,6 +84,7 @@ const Section = styled.section`
   }
 
   & p {
+    color: #ffffff;
     font-size: 20px;
     line-height: 25px;
     @media (min-width: 1056px) {
@@ -102,7 +104,6 @@ const ctaWrapper = css`
     display: flex;
     margin-bottom: 0;
     margin-top: 0;
-    // margin-right: 3em;
   }
 
   & div:first-child {
@@ -135,7 +136,7 @@ const graphicWrapper = css`
     position: absolute;
     right: 0;
     top: 5em;
-    width: 45vw;
+    width: 58vw;
   }
 
   &:after {
