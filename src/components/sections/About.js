@@ -77,10 +77,16 @@ const About = () => {
 }
 
 const Section = styled.section`
-  border: 1px solid orange;
-  margin: 8em 0 4em;
-  padding: 7em 1em;
+  margin: 1em 0;
+  overflow: hidden;
+  padding: 1em;
   position: relative;
+
+  @media (min-width:1056px) {
+    margin: 8em 0 4em;
+    padding: 7em 1em;
+  }
+
   & #about-bg {
     position: absolute;
     right: -15vw;
@@ -104,7 +110,6 @@ const aboutWrapper = css`
   width: 100%;
 
   @media (min-width:1056px) {
-
     justify-content: space-between;
   }
 `
