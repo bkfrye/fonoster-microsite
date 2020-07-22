@@ -4,8 +4,8 @@ import { css } from '@emotion/core'
 const MainMenu = ({ menu }) => {
   return (
     <ul css={list}>
-      { menu.map( (item) =>
-        <li css={listItem}>
+      { menu.map( (item, i) =>
+        <li key={i} css={listItem}>
           { (item.type === `external`) ? (
             <a href={item.url} target="_blank" rel="noreferrer">
               {item.name}

@@ -106,7 +106,7 @@ const ctaWrapper = css`
     margin-top: 0;
   }
 
-  & div:first-child {
+  & div:first-of-type {
     display: block;
     text-align: center;
 
@@ -115,7 +115,7 @@ const ctaWrapper = css`
     }
   }
 
-  & div:nth-child(2) {
+  & div:nth-of-type(2) {
     display: block;
     margin-top: 1em;
     text-align: center;

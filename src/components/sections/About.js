@@ -2,11 +2,12 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-// import Button from '../button'
+import { useWindowWidth } from '@react-hook/window-size'
 import DownloadLink from '../downloadLink'
 
 import Shape from '../../images/svg/bg-section2.svg'
 import Phone from '../../images/svg/graphic-section2.svg'
+import CheckmarkIcon from '../../images/svg/icon-checkmark.svg'
 
 
 const About = () => {
@@ -48,63 +49,104 @@ const About = () => {
         <div css={aboutList}>
           <ListTitle>{about.content.list.title}</ListTitle>
           <ul>
-            { about.content.list.items.map( (item) =>
-              <li>{item}</li>
+            { about.content.list.items.map( (item, i) =>
+              <li key={i}>
+                <span>
+                  <CheckmarkIcon />
+                </span>
+                {item}
+              </li>
             )}
           </ul>
-
           <DownloadLink
             color="#46B96D"
             details={about.cta}
           />
         </div>
       </div>
-      <Shape />
+
+      { (useWindowWidth() >= 1056) &&
+        (
+          <div id="about-bg">
+            <Shape />
+          </div>
+        )
+      }
     </Section>
   )
 }
 
 const Section = styled.section`
-  margin-top: 8em;
-  padding: 3em 0;
+  border: 1px solid orange;
+  margin: 8em 0 4em;
+  padding: 7em 1em;
   position: relative;
   & #about-bg {
-    height: auto;
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 65vw;
+    right: -15vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80vw;
     z-index: -1;
+
+    & svg {
+      height: auto;
+      width: 100%;
+    }
   }
 `
 
 const aboutWrapper = css`
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1222px;
   width: 100%;
+
+  @media (min-width:1056px) {
+
+    justify-content: space-between;
+  }
 `
 
 const aboutContent = css`
+  flex-basis: 100%;
   @media (min-width:1056px) {
-    width: 34%;
+    flex-basis: 34%;
   }
 
   @media (min-width:1254px) {
-    width: 31%;
+    flex-basis: 31%;
   }
 
 `
 
 const phone = css`
+  margin-right: 5%;
   max-width: 280px;
   width: 100%;
+
+  @media (min-width:840px) {
+    flex-basis: 40%;
+  }
+
+  @media (min-width:1056px) {
+    margin: -5% 0 0 0;
+  }
 `
 
 const aboutList = css`
+
+  @media (min-width:840px) {
+    flex-basis: 40%;
+  }
+
   @media (min-width:1056px) {
-    width: 34%;
+    flex-basis: 34%;
+  }
+
+  ul {
+    padding: 0;
   }
 
   li {
@@ -114,9 +156,16 @@ const aboutList = css`
     list-style-type: none;
     padding-bottom: 1em;
 
+    & span {
+      margin-right: 12px;
+    }
+
+    & svg {
+      height: auto;
+      width: 12px;
+    }
   }
 `
-
 
 const ListTitle = styled.p`
   color: #333741;
