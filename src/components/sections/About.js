@@ -77,19 +77,22 @@ const About = () => {
 }
 
 const Section = styled.section`
+  background-color: #F3F3F5;
   margin: 1em 0;
   overflow: hidden;
-  padding: 1em;
+  padding: 2em 1em;
   position: relative;
 
   @media (min-width:1056px) {
-    margin: 8em 0 4em;
+    background-color: transparent;
+    margin: 0;
     padding: 7em 1em;
   }
 
   & #about-bg {
+    left: 35vw;
+    max-width: 1000px;
     position: absolute;
-    right: -15vw;
     top: 50%;
     transform: translateY(-50%);
     width: 80vw;
@@ -127,12 +130,13 @@ const aboutContent = css`
 `
 
 const phone = css`
-  margin-right: 5%;
+  margin: 0 auto;
   max-width: 280px;
   width: 100%;
 
   @media (min-width:840px) {
     flex-basis: 40%;
+    margin: 0 5% 0 0;
   }
 
   @media (min-width:1056px) {
@@ -141,9 +145,11 @@ const phone = css`
 `
 
 const aboutList = css`
+  margin: 0 auto;
 
   @media (min-width:840px) {
     flex-basis: 40%;
+    margin: 0;
   }
 
   @media (min-width:1056px) {

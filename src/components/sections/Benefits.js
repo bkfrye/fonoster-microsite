@@ -67,11 +67,11 @@ const Benefits = () => {
 
 const Section = styled.section`
   margin: 1em 0;
-  padding: 1em;
+  padding: 2em 1em;
   position: relative;
 
   @media (min-width:1056px) {
-    margin: 8em 0 4em;
+    margin: 0;
     padding: 7em 1em;
   }
 
