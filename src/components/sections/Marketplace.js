@@ -41,6 +41,9 @@ const Marketplace = () => {
           <h2>{marketplace.name}</h2>
           <h3>{marketplace.title}</h3>
           <p>{marketplace.content.main}</p>
+            <div className="browser">
+              <Graphic />
+            </div>
           <ul css={marketplaceList}>
             { marketplace.content.lists.map( (list, i) =>
               <li key={i}>
@@ -62,9 +65,7 @@ const Marketplace = () => {
           />
         </div>
       </div>
-      <div className="browser">
-        <Graphic />
-      </div>
+
     </Section>
   )
 }
