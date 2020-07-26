@@ -126,28 +126,24 @@
     "title": "Build a custom application for your business, today.",
     "content": {
       "main": "Businesses can build an app quickly and seamlessly on the Fonoster platform.",
-      "list": {
-        "items": [
-          {
-            "0": {
-              "intro": "It begins with a number.",
-              "content": "Find the perfect number for your project in the Marketplace."
-            },
-            "1": {
-              "intro": "Build your app using our Smart APIs and SDKs.",
-              "content": "Create a smart video, voice or messaging application that meets your business needs without the clutter of unneeded features or historically burdensome customizations."
-            },
-            "2": {
-              "intro": "Deploy your application to Fonoster Cloud.",
-              "content": "Once you’ve customized your app, launch and get started quickly."
-            },
-            "3": {
-              "intro": "Analyze your results.",
-              "content": "Improve your application over time with A/B testing."
-            }
-          }
-        ]
-      }
+      "lists": [
+        {
+          "intro": "1. It begins with a number.",
+          "content": "Find the perfect number for your project in the Marketplace."
+        },
+        {
+          "intro": "2. Build your app using our Smart APIs and SDKs.",
+          "content": "Create a smart video, voice or messaging application that meets your business needs without the clutter of unneeded features or historically burdensome customizations."
+        },
+        {
+          "intro": "3. Deploy your application to Fonoster Cloud.",
+          "content": "Once you’ve customized your app, launch and get started quickly."
+        },
+        {
+          "intro": "4. Analyze your results.",
+          "content": "Improve your application over time with A/B testing."
+        }
+      ]
     }
   },
   "ctaBanner": {
