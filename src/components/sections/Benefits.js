@@ -68,6 +68,10 @@ const Section = styled.section`
   padding: 2em 1em;
   position: relative;
 
+  @media (min-width:640px) {
+    margin: 1em 0 8em;
+  }
+
   @media (min-width:1056px) {
     margin: 0;
     padding: 7em 1em;
@@ -89,9 +93,13 @@ const Section = styled.section`
   & #benefits-bg {
     left: 0;
     position: absolute;
-    top: 70%;
+    top: 68.5%;
     width: 90%;
     z-index: -1;
+
+    @media (min-width:640px) {
+      top: 56%;
+    }
 
     @media (min-width:1056px) {
       left: 0;
