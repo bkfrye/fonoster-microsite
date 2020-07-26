@@ -151,16 +151,14 @@
     "subheadline": "Try us out to start building for free.",
     "cta": [
       {
-        "0": {
-          "text": "Get early access",
-          "url": "#",
-          "type": "button"
-        },
-        "1": {
-          "text": "Download the infographic",
-          "url": "#",
-          "type": "download"
-        }
+        "text": "Get early access",
+        "url": "#",
+        "type": "button"
+      },
+      {
+        "text": "Download the infographic",
+        "url": "#",
+        "type": "download"
       }
     ]
   },

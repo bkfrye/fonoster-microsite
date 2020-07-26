@@ -7,6 +7,7 @@ import About from '../components/sections/About'
 import Benefits from '../components/sections/Benefits'
 import Marketplace from '../components/sections/Marketplace'
 import GettingStarted from '../components/sections/GettingStarted'
+import Banner from '../components/sections/Banner'
 
 const IndexPage = () => {
   // const data = useStaticQuery(graphql`
@@ -21,6 +22,7 @@ const IndexPage = () => {
       <Benefits />
       <Marketplace />
       <GettingStarted />
+      <Banner />
     </Layout>
   )
 }
