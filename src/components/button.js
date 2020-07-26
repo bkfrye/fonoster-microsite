@@ -3,7 +3,7 @@ import { css } from '@emotion/core'
 
 const Button = () => (
   <div css={button}>
-    <a href="www.google.com">Get early access</a>
+    <a href="//www.google.com">Get early access</a>
   </div>
 )
 
