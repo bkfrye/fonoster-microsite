@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import LeadSpace from '../components/sections/LeadSpace'
 import About from '../components/sections/About'
 import Benefits from '../components/sections/Benefits'
+import Marketplace from '../components/sections/Marketplace'
 
 const IndexPage = () => {
   // const data = useStaticQuery(graphql`
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <LeadSpace />
       <About />
       <Benefits />
+      <Marketplace />
     </Layout>
   )
 }

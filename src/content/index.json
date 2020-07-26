@@ -98,17 +98,27 @@
     "title": "How does the marketplace work?",
     "content": {
       "main": "The marketplace brings together businesses, developers, and asset providers in a mutually beneficial platform. Users do business through a simple three-step process:",
-      "list": [
+      "lists": [
         {
-          "0": "<strong>Step One:</strong> An Asset Provider publishes a service offer with accompanying contract agreements to a registry. After a reviewing process, the service offer will appear on the Public Offer Catalog.",
-          "1": "<strong>Step Two:</strong> Businesses discover Assets in the public offer catalog that meet their unique needs.",
-          "2": "<strong>Step Three:</strong> Businesses follow an on-boarding process, accept the terms and conditions, and begin using the asset in their projects. They immediately have the tooling and SDKs to build, test, and deploy the applications."
+          "title": "Step One:",
+          "content": "An Asset Provider publishes a service offer with accompanying contract agreements to a registry. After a reviewing process, the service offer will appear on the Public Offer Catalog.",
+          "icon": "#icon-plus"
+        },
+        {
+          "title": "Step Two:",
+          "content": "Businesses discover Assets in the public offer catalog that meet their unique needs.",
+          "icon": "#icon-magnifyingglass"
+        },
+        {
+          "title": "Step Three:",
+          "content": "Businesses follow an on-boarding process, accept the terms and conditions, and begin using the asset in their projects. They immediately have the tooling and SDKs to build, test, and deploy the applications.",
+          "icon": "#icon-slider"
         }
-      ],
-      "cta": {
-        "text": "Jump into the marketplace",
-        "url": "#"
-      }
+      ]
+    },
+    "cta": {
+      "text": "Jump into the marketplace",
+      "url": "#"
     }
   },
   "gettingStarted": {

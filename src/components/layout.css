@@ -15,6 +15,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  overflow: hidden;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1222px;

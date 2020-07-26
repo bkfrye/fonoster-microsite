@@ -28,8 +28,6 @@ const Benefits = () => {
 
   let benefits = data.contentJson.benefits
 
-  console.log(benefits.content.lists)
-
   return (
     <Section>
       <div css={benefitsWrapper}>
