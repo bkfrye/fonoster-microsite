@@ -46,7 +46,10 @@ const Section = styled.section`
   margin: 1em 0;
   padding: 4em 1em;
   position: relative;
-  text-align: center;
+
+  @media (min-width: 1056px) {
+    text-align: center;
+  }
 
   & h3,
   & p {
