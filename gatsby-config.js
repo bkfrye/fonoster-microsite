@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Fonoster`,
@@ -29,6 +31,17 @@ module.exports = {
         rule: {
           include: `${__dirname}/src/images/svg`,
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': `src/components`,
+          '@sections': `src/components/sections`,
+          '@svg': `src/images/svg`,
+        },
+        extensions: [ `js` ]
       }
     },
     `gatsby-transformer-sharp`,
