@@ -5,9 +5,9 @@ import styled from '@emotion/styled'
 import { useWindowWidth } from '@react-hook/window-size'
 import DownloadLink from '../downloadLink'
 
-import Shape from '../../images/svg/bg-section2.svg'
-import Phone from '../../images/svg/graphic-section2.svg'
-import CheckmarkIcon from '../../images/svg/icon-checkmark.svg'
+import Shape from '@svg/bg-section2.svg'
+import Phone from '@svg/graphic-section2.svg'
+import CheckmarkIcon from '@svg/icon-checkmark.svg'
 
 
 const About = () => {

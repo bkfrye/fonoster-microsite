@@ -3,8 +3,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import DownloadLink from '../downloadLink'
-import Graphic from '../../images/svg/graphic-section4.svg'
-import Sprite from '../../images/svg/sprite-marketplace.svg'
+import Graphic from '@svg/graphic-section4.svg'
+import Sprite from '@svg/sprite-marketplace.svg'
 
 
 const Marketplace = () => {

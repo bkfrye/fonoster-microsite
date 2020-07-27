@@ -5,8 +5,8 @@ import styled from '@emotion/styled'
 import Button from '../button'
 import DownloadLink from '../downloadLink'
 
-import Background from '../../images/svg/bg-section1.svg'
-import Graphic from '../../images/svg/graphic-section1.svg'
+import Background from '@svg/bg-section1.svg'
+import Graphic from '@svg/graphic-section1.svg'
 
 
 const Intro = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import Arrow from '../images/svg/arrow.svg'
+import Arrow from '@svg/arrow.svg'
 
 const DownloadLink = ({ details, color }) => {
   const downloadLink = css`

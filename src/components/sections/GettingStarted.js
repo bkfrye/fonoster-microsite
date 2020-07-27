@@ -4,8 +4,8 @@ import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 
 
-import Shape from '../../images/svg/bg-section5.svg'
-import Graphic from '../../images/svg/graphic-section5.svg'
+import Shape from '@svg/bg-section5.svg'
+import Graphic from '@svg/graphic-section5.svg'
 
 
 const GettingStarted = () => {
