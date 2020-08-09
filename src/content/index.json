@@ -168,26 +168,24 @@
         "name": "Product",
         "items": [
           {
-            "0": {
-              "name": "About",
-              "url": "#about",
-              "type": "internal"
-            },
-            "1": {
-              "name": "Marketplace",
-              "url": "#marketplace",
-              "type": "internal"
-            },
-            "2": {
-              "name": "Console",
-              "url": "#",
-              "type": "external"
-            },
-            "3": {
-              "name": "Support",
-              "url": "#",
-              "type": "external"
-            }
+            "name": "About",
+            "url": "#about",
+            "type": "internal"
+          },
+          {
+            "name": "Marketplace",
+            "url": "#marketplace",
+            "type": "internal"
+          },
+          {
+            "name": "Console",
+            "url": "#",
+            "type": "external"
+          },
+          {
+            "name": "Support",
+            "url": "#",
+            "type": "external"
           }
         ]
       }
