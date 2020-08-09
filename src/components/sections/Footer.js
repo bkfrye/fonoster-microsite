@@ -21,8 +21,6 @@ const Footer = () => {
     }`
   )
 
-  let banner = data.contentJson.ctaBanner
-
   return (
     <footer>
 
