@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import Logo from '@svg/logo-white.svg'
-import CloseIcon from '@svg/close.svg'
-
+import { useWindowWidth } from '@react-hook/window-size'
 import MainMenu from './mainMenu'
 import Button from './button'
+import Logo from '@svg/logo-white.svg'
+import CloseIcon from '@svg/close.svg'
+import MenuIcon from '@svg/icon-menu.svg'
 
 const Header = () => {
+  const winWidth = useWindowWidth()
+  const [ isVisible, setIsVisible ] = useState(null)
+  const [ isMobile, setIsMobile ] = useState()
+
+
   const data = useStaticQuery(graphql`
     query {
       contentJson {
@@ -21,14 +27,45 @@ const Header = () => {
       }
     }`
   )
+
+  useEffect(() => {
+    if (winWidth >= 1056) {
+      setIsMobile(false)
+    } else {
+      setIsMobile(true)
+    }
+
+    if ( isVisible === true ) {
+      if (winWidth >= 1056) {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
+    }
+  })
+
   return (
     <SiteHeader>
       <div className="wrapper">
         <div css={logoWrapper}>
           <Logo />
         </div>
-        <div css={menuWrapper}>
-          <div css={closeIcon}>
+        { (isMobile) &&
+          <div
+            css={menuButton}
+            onClick={ e => setIsVisible(true) }
+          >
+            <MenuIcon />
+          </div>
+        }
+        <div
+          css={menuWrapper}
+          className={ isVisible ? `isVisible` : `` }
+        >
+          <div
+            css={closeIcon}
+            onClick={ e => setIsVisible(false) }
+          >
             <CloseIcon />
           </div>
           <div css={menu}>
@@ -56,6 +93,9 @@ const SiteHeader = styled.header`
 const logoWrapper = css`
   display: inline-block;
   margin-right: 5em;
+  position: relative;
+  z-index: 1000;
+
   & svg {
     height: auto;
     width: 111px;
@@ -67,8 +107,6 @@ const logoWrapper = css`
 `
 
 const menuWrapper = css`
-  display: none;
-
   background-color: #4746D4;
   bottom: 0;
   left: 0;
@@ -78,6 +116,11 @@ const menuWrapper = css`
   top: 0;
   right: 0;
   width: 100%;
+  z-index: -1;
+
+  &.isVisible {
+    z-index: 500;
+  }
 
   @media (min-width:1056px) {
     align-items: center;
@@ -86,6 +129,27 @@ const menuWrapper = css`
     position: relative;
     text-align: left;
     width: 100%;
+    z-index: 500;
+  }
+`
+
+const menuButton = css`
+  cursor: pointer;
+  display: flex;
+  height: 41px;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  width: 41px;
+  z-index: 500;
+
+  & > * {
+    margin: auto;
+  }
+
+  & svg {
+    height: auto;
+    width: 18px;
   }
 `
 
@@ -95,7 +159,7 @@ const closeIcon = css`
   position: absolute;
   top: 1em;
   right: 1em;
-  z-index: 100;
+  z-index: 1000;
 
   @media (min-width:1056px) {
     display: none;
