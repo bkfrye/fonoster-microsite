@@ -34,7 +34,7 @@ const Marketplace = () => {
   let marketplace = data.contentJson.marketplace
 
   return (
-    <Section>
+    <Section id="marketplace">
       <Sprite />
       <div css={marketplaceWrapper}>
         <div css={marketplaceContent}>

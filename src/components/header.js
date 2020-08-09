@@ -42,7 +42,7 @@ const Header = () => {
         setIsVisible(true)
       }
     }
-  })
+  }, [winWidth, isVisible])
 
   return (
     <SiteHeader>

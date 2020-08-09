@@ -29,7 +29,7 @@ const Benefits = () => {
   let benefits = data.contentJson.benefits
 
   return (
-    <Section>
+    <Section id="benefits">
       <div css={benefitsWrapper}>
         <div css={benefitsContent}>
           <h2>{benefits.name}</h2>

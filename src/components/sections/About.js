@@ -36,7 +36,7 @@ const About = () => {
   let about = data.contentJson.about
 
   return (
-    <Section>
+    <Section id="about">
       <div css={aboutWrapper}>
         <div css={aboutContent}>
           <h2>{about.name}</h2>

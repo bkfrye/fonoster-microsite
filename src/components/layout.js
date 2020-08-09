@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SEO from './seo'
 import Header from './header'
+import Footer from './footer'
 import './fonts.css'
 import './layout.css'
 
@@ -12,9 +13,7 @@ const Layout = ({ children }) => {
       <SEO />
       <Header />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}
-      </footer>
+      <Footer />
     </>
   )
 }

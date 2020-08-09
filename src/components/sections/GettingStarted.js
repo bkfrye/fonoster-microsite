@@ -30,7 +30,7 @@ const GettingStarted = () => {
   let gettingStarted = data.contentJson.gettingStarted
 
   return (
-    <Section>
+    <Section id="getting-started">
       <div css={gettingStartedWrapper}>
         <div css={gettingStartedContent}>
           <h2>{gettingStarted.name}</h2>

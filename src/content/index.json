@@ -162,33 +162,31 @@
       }
     ]
   },
-  "footerMenu": [
-    {
-      "list": {
-        "name": "Product",
-        "items": [
-          {
-            "name": "About",
-            "url": "#about",
-            "type": "internal"
-          },
-          {
-            "name": "Marketplace",
-            "url": "#marketplace",
-            "type": "internal"
-          },
-          {
-            "name": "Console",
-            "url": "#",
-            "type": "external"
-          },
-          {
-            "name": "Support",
-            "url": "#",
-            "type": "external"
-          }
-        ]
-      }
+  "footerMenu": {
+    "list": {
+      "name": "Product",
+      "items": [
+        {
+          "name": "About",
+          "url": "#about",
+          "type": "internal"
+        },
+        {
+          "name": "Marketplace",
+          "url": "#marketplace",
+          "type": "internal"
+        },
+        {
+          "name": "Console",
+          "url": "#",
+          "type": "external"
+        },
+        {
+          "name": "Support",
+          "url": "#",
+          "type": "external"
+        }
+      ]
     }
-  ]
+  }
 }
