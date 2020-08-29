@@ -2,22 +2,22 @@
   "mainMenu": [
     {
       "name": "About",
-      "url": "#about",
+      "url": "/#about",
       "type": "internal"
     },
     {
       "name": "Benefits",
-      "url": "#benefits",
+      "url": "/#benefits",
       "type": "internal"
     },
     {
       "name": "Marketplace",
-      "url": "#marketplace",
+      "url": "/#marketplace",
       "type": "internal"
     },
     {
       "name": "Getting started",
-      "url": "#getting-started",
+      "url": "/#getting-started",
       "type": "internal"
     },
     {

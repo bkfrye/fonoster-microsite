@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { MenuContext } from './Provider'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 const MainMenu = ({ menu, isActive }) => (
   <MenuContext.Consumer>
@@ -16,10 +17,15 @@ const MainMenu = ({ menu, isActive }) => (
                 onClick={ e => context.setActiveMenu(false) }
               >{item.name}</a>
             ) : (
-              <a
-                href={item.url}
-                onClick={ e => context.setActiveMenu(false) }
-              >{item.name}</a>
+              <div onClick={ e => {
+                context.setActiveMenu(false)
+              }}>
+
+                <AnchorLink
+                  to={item.url}
+                  stripped
+                >{item.name}</AnchorLink>
+              </div>
             )}
           </li>
         ) }
