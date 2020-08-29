@@ -41,7 +41,7 @@ const DownloadLink = ({ details, color, hoverColor }) => {
   `
   return (
     <div css={downloadLink}>
-      <a href={details.url} target="_blank" rel="noreferrer">
+      <a href={details.url} download>
         {details.text}
         <span><Arrow /></span>
       </a>
