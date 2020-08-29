@@ -8,24 +8,25 @@ const MainMenu = ({ menu, isActive }) => (
     { context =>
       <ul css={list}>
         { menu.map( (item, i) =>
-          <li key={i} css={listItem}>
+          <li
+            key={i}
+            css={listItem}
+            onClick={ e =>
+              context.setActiveMenu(false)
+            }
+          >
             { (item.type === `external`) ? (
               <a
                 href={item.url}
                 target="_blank"
                 rel="noreferrer"
-                onClick={ e => context.setActiveMenu(false) }
+
               >{item.name}</a>
             ) : (
-              <div onClick={ e => {
-                context.setActiveMenu(false)
-              }}>
-
-                <AnchorLink
-                  to={item.url}
-                  stripped
-                >{item.name}</AnchorLink>
-              </div>
+              <AnchorLink
+                to={item.url}
+                stripHash
+              >{item.name}</AnchorLink>
             )}
           </li>
         ) }
