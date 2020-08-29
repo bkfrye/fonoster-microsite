@@ -43,7 +43,7 @@ const Banner = () => {
 
 const Section = styled.section`
   background-color: #4746D4;
-  margin: 1em 0;
+  margin: 1em 0 0;
   padding: 4em 1em;
   position: relative;
 
