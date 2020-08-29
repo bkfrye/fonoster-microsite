@@ -32,17 +32,33 @@ const Footer = () => {
             <h4 css={css`margin-bottom: 0`}>{footer.list.name}</h4>
             <ul>
               {footer.list.items
-                .filter(item => item.type === `internal`)
-                .map( (item, idx) => <li><a href={item.url}>{item.name}</a></li>
-              )}
+                .filter(item =>
+                  item.type === `internal`
+                ).map( (item, idx) =>
+                  <li key={idx}>
+                    <a
+                      href={item.url}
+                    >{item.name}</a>
+                  </li>
+                )
+              }
             </ul>
           </div>
           <div className="footer-menu-list">
             <ul className="list-no-title">
               {footer.list.items
-                .filter(item => item.type === `external`)
-                .map( (item, idx) => <li><a href={item.url} target="_blank" rel="noreferrer">{item.name}</a></li>
-              )}
+                .filter(item =>
+                  item.type === `external`
+                ).map( (item, idx) =>
+                  <li key={idx}>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >{item.name}</a>
+                  </li>
+                )
+              }
             </ul>
           </div>
         </div>
