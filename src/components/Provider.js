@@ -7,7 +7,7 @@ MenuContext.displayName = 'MenuContext';
 const Provider = props => {
   const winWidth = useWindowWidth()
   const [ isVisible, setIsVisible ] = useState(false)
-  const [ isMobile, setIsMobile ] = useState()
+  const [ isMobile, setIsMobile ] = useState(null)
 
   useEffect(() => {
     if (winWidth >= 1056) {

@@ -31,7 +31,7 @@ const Header = () => {
             <div css={logoWrapper}>
               <Logo />
             </div>
-            { (context.isMobile) &&
+            { (context && context.isMobile) &&
               <button
                 css={menuButton}
                 onClick={ e => context.setActiveMenu(true) }
@@ -41,7 +41,7 @@ const Header = () => {
             }
             <div
               css={menuWrapper}
-              className={ context.isVisible ? `isVisible` : `` }
+              className={ (context && context.isVisible) ? `isVisible` : `` }
             >
               <button
                 css={closeIcon}
@@ -52,7 +52,7 @@ const Header = () => {
               <div className="menu">
                 <MainMenu
                   menu={data.contentJson.mainMenu}
-                  isActive={context.isVisible}
+                  isActive={(context && context.isVisible)}
                 />
               </div>
               <div css={buttonWrapper}>
