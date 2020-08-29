@@ -28,7 +28,6 @@ const Header = () => {
       { context =>
         <SiteHeader>
           <div className="wrapper">
-            {context.isMobile}
             <div css={logoWrapper}>
               <Logo />
             </div>
