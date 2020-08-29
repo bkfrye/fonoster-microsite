@@ -1,25 +1,32 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { MenuContext } from './Provider'
 
-const MainMenu = ({ menu }) => {
-  return (
-    <ul css={list}>
-      { menu.map( (item, i) =>
-        <li key={i} css={listItem}>
-          { (item.type === `external`) ? (
-            <a href={item.url} target="_blank" rel="noreferrer">
-              {item.name}
-            </a>
-          ) : (
-            <a href={item.url}>
-              {item.name}
-            </a>
-          )}
-        </li>
-      ) }
-    </ul>
-  )
-}
+const MainMenu = ({ menu, isActive }) => (
+  <MenuContext.Consumer>
+    { context =>
+      <ul css={list}>
+        { menu.map( (item, i) =>
+          <li key={i} css={listItem}>
+            { (item.type === `external`) ? (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                onClick={ e => context.setActiveMenu(false) }
+              >{item.name}</a>
+            ) : (
+              <a
+                href={item.url}
+                onClick={ e => context.setActiveMenu(false) }
+              >{item.name}</a>
+            )}
+          </li>
+        ) }
+      </ul>
+    }
+  </MenuContext.Consumer>
+)
 
 const list = css`
   text-align: center;

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import { useWindowWidth } from '@react-hook/window-size'
+import { MenuContext } from './Provider'
 import MainMenu from './mainMenu'
 import Button from './button'
 import Logo from '@svg/logo-white.svg'
@@ -11,11 +11,6 @@ import CloseIcon from '@svg/close.svg'
 import MenuIcon from '@svg/icon-menu.svg'
 
 const Header = () => {
-  const winWidth = useWindowWidth()
-  const [ isVisible, setIsVisible ] = useState(null)
-  const [ isMobile, setIsMobile ] = useState()
-
-
   const data = useStaticQuery(graphql`
     query {
       contentJson {
@@ -28,55 +23,47 @@ const Header = () => {
     }`
   )
 
-  useEffect(() => {
-    if (winWidth >= 1056) {
-      setIsMobile(false)
-    } else {
-      setIsMobile(true)
-    }
-
-    if ( isVisible === true ) {
-      if (winWidth >= 1056) {
-        setIsVisible(false)
-      } else {
-        setIsVisible(true)
-      }
-    }
-  }, [winWidth, isVisible])
-
   return (
-    <SiteHeader>
-      <div className="wrapper">
-        <div css={logoWrapper}>
-          <Logo />
-        </div>
-        { (isMobile) &&
-          <button
-            css={menuButton}
-            onClick={ e => setIsVisible(true) }
-          >
-            <MenuIcon />
-          </button>
-        }
-        <div
-          css={menuWrapper}
-          className={ isVisible ? `isVisible` : `` }
-        >
-          <button
-            css={closeIcon}
-            onClick={ e => setIsVisible(false) }
-          >
-            <CloseIcon />
-          </button>
-          <div css={menu}>
-            <MainMenu menu={data.contentJson.mainMenu} />
+    <MenuContext.Consumer>
+      { context =>
+        <SiteHeader>
+          <div className="wrapper">
+            {context.isMobile}
+            <div css={logoWrapper}>
+              <Logo />
+            </div>
+            { (context.isMobile) &&
+              <button
+                css={menuButton}
+                onClick={ e => context.setActiveMenu(true) }
+              >
+                <MenuIcon />
+              </button>
+            }
+            <div
+              css={menuWrapper}
+              className={ context.isVisible ? `isVisible` : `` }
+            >
+              <button
+                css={closeIcon}
+                onClick={ e => context.setActiveMenu(false) }
+              >
+                <CloseIcon />
+              </button>
+              <div css={menu}>
+                <MainMenu
+                  menu={data.contentJson.mainMenu}
+                  isActive={context.isVisible}
+                />
+              </div>
+              <div css={buttonWrapper}>
+                <Button />
+              </div>
+            </div>
           </div>
-          <div css={buttonWrapper}>
-            <Button />
-          </div>
-        </div>
-      </div>
-    </SiteHeader>
+        </SiteHeader>
+      }
+    </MenuContext.Consumer>
   )
 }
 
