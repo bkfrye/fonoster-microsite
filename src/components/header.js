@@ -50,7 +50,7 @@ const Header = () => {
               >
                 <CloseIcon />
               </button>
-              <div css={menu}>
+              <div className="menu">
                 <MainMenu
                   menu={data.contentJson.mainMenu}
                   isActive={context.isVisible}
@@ -69,6 +69,11 @@ const Header = () => {
 
 const SiteHeader = styled.header`
   background-color: #4746D4;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
 
   & .wrapper {
     align-items: center;
@@ -95,18 +100,23 @@ const logoWrapper = css`
 
 const menuWrapper = css`
   background-color: #4746D4;
-  bottom: 0;
   left: 0;
   padding-top: 4em;
-  position: fixed;
   text-align: center;
   top: 0;
   right: 0;
   width: 100%;
-  z-index: -1;
+  display: none;
 
   &.isVisible {
+    bottom: 0;
+    display: block;
+    position: fixed;
     z-index: 500;
+
+    & .menu {
+      display: block;
+    }
   }
 
   @media (min-width:1056px) {
@@ -116,7 +126,16 @@ const menuWrapper = css`
     position: relative;
     text-align: left;
     width: 100%;
-    z-index: 500;
+  }
+
+  & .menu {
+    flex: 2;
+    width: 100%;
+    display none;
+
+    @media (min-width:1056px) {
+      display: inline-block;
+    }
   }
 `
 
@@ -159,15 +178,6 @@ const closeIcon = css`
   & svg {
     height: 12px;
     width: 12px;
-  }
-`
-
-const menu = css`
-  flex: 2;
-  width: 100%;
-
-  @media (min-width:1056px) {
-    display: inline-block;
   }
 `
 

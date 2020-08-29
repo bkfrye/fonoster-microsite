@@ -64,13 +64,13 @@ const Intro = () => {
 const Section = styled.section`
   background-color: #4746D4;
   color: #ffffff;
-  padding-top: 0;
+  padding-top: 6em;
   position: relative;
 
   @media (min-width: 1056px) {
     background-color: transparent;
     padding-bottom: 30%;
-    padding-top: 3vw;
+    padding-top: 8em;
   }
 
   & h1 {
