@@ -61,6 +61,7 @@ const Marketplace = () => {
           </ul>
           <DownloadLink
             color="#46B96D"
+            hoverColor="#26B060"
             details={marketplace.cta}
           />
         </div>

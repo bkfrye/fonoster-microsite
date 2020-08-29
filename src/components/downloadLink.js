@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/core'
 import Arrow from '@svg/arrow.svg'
 
-const DownloadLink = ({ details, color }) => {
+const DownloadLink = ({ details, color, hoverColor }) => {
   const downloadLink = css`
     display: inline-block;
     max-height: 40px;
@@ -17,10 +17,10 @@ const DownloadLink = ({ details, color }) => {
 
       &:hover {
         border-bottom: 0;
-        color: #918FE6;
+        color: ${hoverColor};
 
         & polygon {
-          fill: #918FE6;
+          fill: ${hoverColor};
         }
       }
 
