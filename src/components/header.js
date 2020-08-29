@@ -51,23 +51,23 @@ const Header = () => {
           <Logo />
         </div>
         { (isMobile) &&
-          <div
+          <button
             css={menuButton}
             onClick={ e => setIsVisible(true) }
           >
             <MenuIcon />
-          </div>
+          </button>
         }
         <div
           css={menuWrapper}
           className={ isVisible ? `isVisible` : `` }
         >
-          <div
+          <button
             css={closeIcon}
             onClick={ e => setIsVisible(false) }
           >
             <CloseIcon />
-          </div>
+          </button>
           <div css={menu}>
             <MainMenu menu={data.contentJson.mainMenu} />
           </div>
@@ -134,6 +134,8 @@ const menuWrapper = css`
 `
 
 const menuButton = css`
+  background: transparent;
+  border: 0;
   cursor: pointer;
   display: flex;
   height: 41px;
@@ -154,6 +156,8 @@ const menuButton = css`
 `
 
 const closeIcon = css`
+  background: transparent;
+  border: 0;
   cursor: pointer;
   padding: 1em;
   position: absolute;
