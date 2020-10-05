@@ -33,16 +33,14 @@ const Header = () => {
 
   useDocumentScrollThrottled(callbackData => {
     const { previousScrollTop, currentScrollTop } = callbackData
-    const isScrolledDown = previousScrollTop < currentScrollTop
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
 
     setTimeout(() => {
-      setShouldChangeHeader(isScrolledDown && isMinimumScrolled)
+      setShouldChangeHeader(isMinimumScrolled)
     }, TIMEOUT_DELAY)
   });
 
   const scrolledStyle = shouldChangeHeader ? `white` : ``
-  // const isMenuVisible = (context && context.isVisible) ? `isVisible` : ``
 
   return (
     <MenuContext.Consumer>
@@ -55,6 +53,7 @@ const Header = () => {
             { (context && context.isMobile) &&
               <button
                 css={menuButton}
+                className={`${scrolledStyle}`}
                 onClick={ e => context.setActiveMenu(true) }
               >
                 <MenuIcon />
@@ -62,7 +61,7 @@ const Header = () => {
             }
             <div
               css={menuWrapper}
-              className={ `${context.isVisible ? `isVisible` : ``} ${scrolledStyle}` }
+              className={ `${(context && context.isVisible) ? `isVisible` : ``} ${scrolledStyle}` }
             >
               <button
                 css={closeIcon}
@@ -126,10 +125,6 @@ const logoWrapper = css`
   & svg {
     height: auto;
     width: 111px;
-
-    & path {
-      fill: #fff;
-    }
   }
 `
 
@@ -143,7 +138,7 @@ const menuWrapper = css`
   transition: all 220ms ease-in-out;
   right: 0;
   width: 100%;
-  
+
   &.white {
     background-color: #ffffff;
   }
@@ -208,6 +203,16 @@ const menuButton = css`
   & svg {
     height: auto;
     width: 18px;
+    stroke: #fff;
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 3px;
+  }
+
+  &.white {
+    & svg {
+      stroke: #333741;
+    }
   }
 `
 
