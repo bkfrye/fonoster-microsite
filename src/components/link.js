@@ -2,8 +2,8 @@ import React from 'react'
 import { css } from '@emotion/core'
 import Arrow from '@svg/arrow.svg'
 
-const DownloadLink = ({ details, color, hoverColor }) => {
-  const downloadLink = css`
+const Link = ({ details, color, hoverColor, download }) => {
+  const LinkStyle = css`
     display: inline-block;
     max-height: 40px;
     & a {
@@ -40,11 +40,19 @@ const DownloadLink = ({ details, color, hoverColor }) => {
     }
   `
   return (
-    <div css={downloadLink}>
-      <a href={details.url} download>
-        {details.text}
-        <span><Arrow /></span>
-      </a>
+    <div css={LinkStyle}>
+      { (download === 'true') ? (
+        <a href={details.url} download>
+          {details.text}
+          <span><Arrow /></span>
+        </a>
+      ) : (
+        <a href={details.url}>
+          {details.text}
+          <span><Arrow /></span>
+        </a>
+      ) }
+
     </div>
   )
 }
@@ -52,4 +60,4 @@ const DownloadLink = ({ details, color, hoverColor }) => {
 
 
 
-export default DownloadLink
+export default Link
