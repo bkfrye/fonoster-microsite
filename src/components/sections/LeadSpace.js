@@ -38,8 +38,12 @@ const Intro = () => {
             top: 0;
             left: 0;
             height: auto;
-            width: 100%;
+            width: 140%;
             z-index: -1;
+          }
+
+          @media (min-width: 1173px) {
+            width: 100%;
           }
         `}
       />
