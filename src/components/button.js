@@ -1,9 +1,9 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-const Button = () => (
+const Button = ( {link, text} ) => (
   <div css={button}>
-    <a href="//www.google.com">Get early access</a>
+    <a href={link}>{text}</a>
   </div>
 )
 
