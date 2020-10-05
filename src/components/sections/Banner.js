@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Button from '../button'
-import DownloadLink from '../downloadLink'
+import Link from '../link'
 
 
 const Banner = () => {
@@ -25,16 +25,22 @@ const Banner = () => {
 
   let banner = data.contentJson.ctaBanner
 
+  console.log(banner)
+
   return (
     <Section>
       <h3>{banner.headline}</h3>
       <p>{banner.subheadline}</p>
 
       <div css={ctaWrapper}>
-        <Button />
-        <DownloadLink
+        <Button
+          link="//www.google.com"
+          text="Get early access"
+        />
+        <Link
           details={banner.cta[1]}
           color='white'
+          download='true'
         />
       </div>
     </Section>

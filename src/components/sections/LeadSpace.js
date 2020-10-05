@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Button from '../button'
-import DownloadLink from '../downloadLink'
+import Link from '../link'
 
 import Background from '@svg/bg-section1.svg'
 import Graphic from '@svg/graphic-section1.svg'
@@ -47,10 +47,14 @@ const Intro = () => {
         <h1>{leadspace.title}</h1>
         <p>{leadspace.content}</p>
         <div css={ctaWrapper}>
-          <Button />
-          <DownloadLink
+          <Button
+            link="//www.google.com"
+            text="Get early access"
+          />
+          <Link
             details={leadspace.cta}
             color='white'
+            download='true'
           />
         </div>
         <div css={graphicWrapper}>

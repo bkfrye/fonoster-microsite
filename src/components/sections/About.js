@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { useWindowWidth } from '@react-hook/window-size'
-import DownloadLink from '../downloadLink'
+import Link from '../link'
 
 import Shape from '@svg/bg-section2.svg'
 import Phone from '@svg/graphic-section2.svg'
@@ -58,7 +58,7 @@ const About = () => {
               </li>
             )}
           </ul>
-          <DownloadLink
+          <Link
             color="#46B96D"
             hoverColor="#26B060"
             details={about.cta}

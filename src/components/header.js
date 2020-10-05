@@ -56,7 +56,10 @@ const Header = () => {
                 />
               </div>
               <div css={buttonWrapper}>
-                <Button />
+                <Button
+                  link="//www.google.com"
+                  text="Get early access"
+                />
               </div>
             </div>
           </div>
