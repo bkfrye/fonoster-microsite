@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
 import { MenuContext } from './Provider'
+import useDocumentScrollThrottled from './useDocumentScrollThrottle'
 import MainMenu from './mainMenu'
 import Button from './button'
-import Logo from '@svg/logo-white.svg'
+import WhiteLogo from '@svg/logo-white.svg'
+import ColorLogo from '@svg/logo-color.svg'
 import CloseIcon from '@svg/close.svg'
 import MenuIcon from '@svg/icon-menu.svg'
 
@@ -23,13 +25,32 @@ const Header = () => {
     }`
   )
 
+  const [shouldChangeHeader, setShouldChangeHeader] = useState(false)
+
+
+  const MINIMUM_SCROLL = 400
+  const TIMEOUT_DELAY = 400
+
+  useDocumentScrollThrottled(callbackData => {
+    const { previousScrollTop, currentScrollTop } = callbackData
+    const isScrolledDown = previousScrollTop < currentScrollTop
+    const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL
+
+    setTimeout(() => {
+      setShouldChangeHeader(isScrolledDown && isMinimumScrolled)
+    }, TIMEOUT_DELAY)
+  });
+
+  const scrolledStyle = shouldChangeHeader ? `white` : ``
+  // const isMenuVisible = (context && context.isVisible) ? `isVisible` : ``
+
   return (
     <MenuContext.Consumer>
       { context =>
-        <SiteHeader>
+        <SiteHeader className={ `${scrolledStyle}` }>
           <div className="wrapper">
             <div css={logoWrapper}>
-              <Logo />
+              { shouldChangeHeader ? <ColorLogo /> : <WhiteLogo /> }
             </div>
             { (context && context.isMobile) &&
               <button
@@ -41,7 +62,7 @@ const Header = () => {
             }
             <div
               css={menuWrapper}
-              className={ (context && context.isVisible) ? `isVisible` : `` }
+              className={ `${context.isVisible ? `isVisible` : ``} ${scrolledStyle}` }
             >
               <button
                 css={closeIcon}
@@ -49,7 +70,7 @@ const Header = () => {
               >
                 <CloseIcon />
               </button>
-              <div className="menu">
+              <div className={ `menu ${scrolledStyle}` }>
                 <MainMenu
                   menu={data.contentJson.mainMenu}
                   isActive={(context && context.isVisible)}
@@ -75,7 +96,12 @@ const SiteHeader = styled.header`
   position: fixed;
   right: 0;
   top: 0;
+  transition: all 220ms ease-in-out;
   z-index: 1000;
+
+  &.white {
+    background-color: #ffffff;
+  }
 
   & .wrapper {
     align-items: center;
@@ -88,7 +114,14 @@ const logoWrapper = css`
   display: inline-block;
   margin-right: 5em;
   position: relative;
+  transition: all 220ms ease-in-out;
   z-index: 1000;
+
+  &.white {
+    & svg path {
+      fill: #4746D4;
+    }
+  }
 
   & svg {
     height: auto;
@@ -102,13 +135,18 @@ const logoWrapper = css`
 
 const menuWrapper = css`
   background-color: #4746D4;
+  display: none;
   left: 0;
   padding-top: 4em;
   text-align: center;
   top: 0;
+  transition: all 220ms ease-in-out;
   right: 0;
   width: 100%;
-  display: none;
+  
+  &.white {
+    background-color: #ffffff;
+  }
 
   &.isVisible {
     bottom: 0;
@@ -137,6 +175,16 @@ const menuWrapper = css`
 
     @media (min-width:1056px) {
       display: inline-block;
+    }
+
+    &.white {
+      & .list-item a {
+        color: #333741;
+
+        &:hover {
+          color: #666E82;
+        }
+      }
     }
   }
 `

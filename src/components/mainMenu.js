@@ -10,7 +10,7 @@ const MainMenu = ({ menu, isActive }) => (
         { menu.map( (item, i) =>
           <li
             key={i}
-            css={listItem}
+            className="list-item"
             onClick={ e =>
               context.setActiveMenu(false)
             }
@@ -43,33 +43,33 @@ const list = css`
   @media (min-width:1056px) {
     display: flex;
   }
-`
 
-const listItem = css`
-  list-style-type: none;
+  .list-item {
 
-  @media (min-width:1056px) {
-    margin-right: 2em;
-  }
-
-  & a {
-    color: #fff;
-    display: block;
-    font-weight: 900;
-    padding: 1em 0;
-    text-decoration: none;
-    transition: color 220ms ease-in-out;
-
-    &:hover {
-      color: #918FE6;
-    }
+    list-style-type: none;
 
     @media (min-width:1056px) {
-      display: inline-block;
-      padding: 0;
+      margin-right: 2em;
+    }
+
+    & a {
+      color: #fff;
+      display: block;
+      font-weight: 900;
+      padding: 1em 0;
+      text-decoration: none;
+      transition: color 220ms ease-in-out;
+
+      &:hover {
+        color: #918FE6;
+      }
+
+      @media (min-width:1056px) {
+        display: inline-block;
+        padding: 0;
+      }
     }
   }
-
 `
 
 export default MainMenu
