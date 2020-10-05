@@ -25,8 +25,6 @@ const Banner = () => {
 
   let banner = data.contentJson.ctaBanner
 
-  console.log(banner)
-
   return (
     <Section>
       <h3>{banner.headline}</h3>
